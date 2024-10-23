@@ -14,6 +14,12 @@ app.use(cors());
 app.get('/' , (req , res)=>{
     res.send("working");
 })
+app.set('view engine' , 'hbs');
+app.get("/home",(req,res)=>{
+    res.render("home" ,{
+
+    })
+})
 app.listen(port , ()=>{
     console.log(`server running on http://localhost:${port}`);
 })
