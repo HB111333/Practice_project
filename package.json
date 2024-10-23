@@ -2,5 +2,23 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1"
-  }
+  },
+  "name": "practice_project",
+  "description": "��#\u0000 \u0000P\u0000r\u0000a\u0000c\u0000t\u0000i\u0000c\u0000e\u0000_\u0000p\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HB111333/Practice_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HB111333/Practice_project/issues"
+  },
+  "homepage": "https://github.com/HB111333/Practice_project#readme"
 }
