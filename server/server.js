@@ -46,6 +46,8 @@ app.get("/alluser", (req, res) => {
         users: users, 
     });
 });
+//register route
+app.use("/api/register" , require("./routes/userRoutes"));
 app.listen(port , ()=>{
     console.log(`server running on http://localhost:${port}`);
 })
