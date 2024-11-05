@@ -2,6 +2,7 @@ const express = require("express");
 const connectDb = require("./config/dbConnection");
 const errorHandler = require("./middlewares/errorHandler");
 const cors= require("cors");
+const {GridFsStorage} = require('multer-gridfs-storage');
 const multer  = require('multer');
 //const upload = multer({ dest: 'uploads/' });
 const hbs = require("hbs");
