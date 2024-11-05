@@ -1,0 +1,42 @@
+1.concurrency: principle and issue with concurrency
+2. mutual exclusion,hardware approach ,software,software approch
+3. semaphore, mutex,and monition.
+4.deadlocks: principle of deadlock, deadlock prevention
+5. deadlock avoidance
+6. deadlock detection
+7. deadlock recovery
+intro to concurrency:
+1. concurrency is the execution of multiple instruction sequences at the same time.
+2. it happens in the OS when there are several process thread running int parll.
+3. the running process threads always communicate with each other through shared memory or message passing.
+4. concurrency result in sharing of resources result in parll like deadlocks and resources starvation,
+5. it helps in techniques like coordinating execution of processes, memory alloc and execution scheduling for maximumize
+   throughput.
+concurrent processes: two types
+            1.overlaped (finish first process then go to another)
+            2.interleaved(round robin)
+
+*  principle of concurrency
+both interleaved and overlaped processes can be viewed as examples of concurrent processes, they both present the same problems.
+the relative speed of execution cannot be predicted. it depends on the following :
+  * the activiteds of other processes
+  * the way os system handles interrupts
+  * the scheduling policies of os.
+problem in concurrency
+1. sharing global resources- sharing of global resources safely is difficult . if two processes both make use of global variable and both prefer read and write on that variable , then the order in which various read and write are executed is critical.
+2. optimal allocof resources- it is difficult for the Ps to manage alloc of resources optimally.
+
+
+adv of concurrency
+1. running of multiple applications- it enable to run multiple applications at the same time.
+2. betteer resource utilization - it enables that the resources that are unused by one application can be used for other applications.
+3. better avg responce time- without concurrency , each application has to be run to completion before thew next one can be run..
+
+issues of concurrency
+1. blocking - processes can block waiting for resources process could . A process could be blocked for long period of time waiting for input from terminal . if the process is required to preiodically update some data, this would be very undesirable.
+2. Starvagtion- it occurs when a process does not obtain service to progress.
+3. deadlock - it occurs when two processes are blocked and hence neither can proceed execute.
+
+
+
+           
