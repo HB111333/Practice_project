@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const  jwtAuthMiddleware= require("../middlewares/jwtmiddleware") ;
 const {
     registerUser,
     loginUser
 }=require("../controllers/userController");
 //route for user registration 
 router.post("/register",registerUser);
-router.post("/login", loginUser);
+router.post("/login", jwtAuthMiddleware,loginUser);
 //route for user login
 //router.post("/register",loginUser);
 
