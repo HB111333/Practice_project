@@ -1,13 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const  jwtAuthMiddleware= require("../middlewares/jwtmiddleware") ;
+//const  jwtAuthMiddleware= require("../middlewares/jwtmiddleware") ;
+const{validateToken,generateToken}=require("../middlewares/jwtmiddleware")
 const {
     registerUser,
     loginUser
 }=require("../controllers/userController");
 //route for user registration 
 router.post("/register",registerUser);
-router.post("/login", jwtAuthMiddleware,loginUser);
+router.post("/login", generateToken,loginUser);
 //route for user login
 //router.post("/register",loginUser);
 
