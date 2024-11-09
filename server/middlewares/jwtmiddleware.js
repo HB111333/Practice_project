@@ -1,9 +1,9 @@
 var jwt=require('jsonwebtoken');
 
-const generateToken=(userData)=>{
+// const generateToken=(userData)=>{
   
-  return jwt.sign(userData,process.env.PRIVATE_KEY);
-}
+//   return jwt.sign(userData,process.env.PRIVATE_KEY);
+// }
 
 const validateJwtToken = (req,res,next)=>{
    //first we are checking thagt jwt token is available or not.
@@ -32,4 +32,4 @@ const validateJwtToken = (req,res,next)=>{
 
   
 }
-module.exports = {generateToken,validateJwtToken};
+module.exports = {validateJwtToken};

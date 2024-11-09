@@ -8,7 +8,7 @@ const {
 }=require("../controllers/userController");
 //route for user registration 
 router.post("/register",registerUser);
-router.post("/login", generateToken,loginUser);
+router.post("/login",loginUser);
 //route for user login
 //router.post("/register",loginUser);
 

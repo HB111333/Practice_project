@@ -34,6 +34,7 @@
 
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
+const jwt=require("jsonwebtoken");
 const User = require("../models/userModel"); // Corrected variable name to 'User'
 require("dotenv").config();
 
@@ -78,8 +79,18 @@ const loginUser = asyncHandler(async (req, res) => {
     }
     const user = await User.findOne({ email });
     if (user && (await bcrypt.compare(password, user.password))) {
+        const token= jwt.sign(
+            {
+                 id: user._id,
+                 
+                 email: user.email},
+                 process.env.PRIVATE_KEY,
+                 { expiresIn: '1h' }
+             
+         );
+         console.log(token)
         res.status(200).json({
-            message: "User logged in successfully",
+            message: "User logged in successfully" , token,
             user: {
                 id: user._id,
                 firstName: user.firstName,
