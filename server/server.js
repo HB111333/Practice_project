@@ -71,6 +71,7 @@ app.post('/profile', upload.single('avatar'), function (req, res, next) {
   
 //register route
 app.use("/api/register" , require("./routes/userRoutes"));
+app.use("/api/newsletter" , require("./routes/newsLetterRoutes"));
 app.listen(port , ()=>{
     console.log(`server running on http://localhost:${port}`);
 })
